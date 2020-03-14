@@ -1,0 +1,391 @@
+body {
+ font-family: Montserrat,sans-serif;
+ font-size: 18px;
+ margin: 0;
+ font-weight: 300;
+ text-align: left;
+ background: url(./images/blueprint.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media print {
+    @page
+    {
+     size: A4;
+     size: portrait;
+   }
+    body{
+        font-size: 12px;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+        background: none;
+    }
+    .noprint{
+        display: none!important;
+    }
+    .wrapper {
+        filter: none!important;
+ 
+    }
+    div{
+        page-break-inside: auto ;
+    }
+
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-display: swap;
+    src: url(./fonts/Montserrat-ExtraLight.woff);
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-display: swap;
+    src: url(./fonts/Montserrat-Light.woff);
+  }
+  
+
+h1,h2,h3,h4,h5,h6,p {
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h3 {
+    font-size: 200%;
+    color: #50518b;
+    text-align: center;
+}
+
+h4 {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: underline;
+    color: inherit;
+    font-weight: bold;
+}
+
+img{
+    width: 100%;
+}
+
+ul {
+    padding-right: 0.5em;
+}
+
+li {
+    margin-bottom: 0.25em;
+}
+
+hr {
+    color: #CCC;
+    border-style: dashed;
+    margin: 0;
+}
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+
+.small {
+    font-size: 80%;
+}
+
+.color1{
+    background-color: #282a6b!important;
+    color: white;
+}
+
+
+.color2{
+    background-color: #50518b!important;
+    color: white;
+}
+
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.75) );
+
+}
+
+.contentblock {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    background-color: white;
+    justify-content: center;
+}
+
+.rightup {
+    flex-direction: row;
+}
+
+.leftup {
+    flex-direction: row;
+}
+
+.space-around {
+    justify-content: space-around!important;
+    -webkit-box-pack: space-evenly!important;
+}
+
+@media screen and (max-width: 768px) {
+    .rightup {
+        flex-direction: column-reverse;
+    }
+    .leftup {
+        flex-direction: column;
+    }
+  }
+
+.name{
+    padding: 1em;
+    flex-grow: 1;
+    align-self: center;
+
+}
+@media screen and (max-width: 768px) {
+    .name {
+        align-self: unset;
+    }
+    
+  }
+
+.avatarzone{
+    width: 25vw;
+    max-width: 290px;
+    padding: 1em;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    align-items: center;
+    background-image: url(./images/avatar.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+}
+
+.avatarzone:hover{
+    background-image: url(./images/avatar2.jpg);
+    transition-property: all;
+    transition-duration: 0.5s
+}
+@media screen and (max-width: 768px) {
+    .avatarzone {
+        width: unset;
+        max-width: unset;
+        height: 200px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    
+  }
+  @media print {
+    .avatarzone {
+        background-image: url(./images/avatar2.jpg);
+    }
+    
+
+}
+
+
+.infos {
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-direction: column;
+    width: 40%;
+    min-width: 270px;
+    
+}
+@media screen and (max-width: 768px) {
+    .infos {
+        width: auto;
+    }
+    
+  }
+
+.downloadbutton {
+    text-decoration: none;
+    text-align: center;
+    color: #282a6b;
+    background-color: white;
+    margin: 0.5em;
+    border-radius: 7px;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+.downloadbutton:hover {
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.75) );
+}
+
+.oneinfo {
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-direction: row;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .oneinfo {
+        max-width: 270px;
+    }
+    .nolimit {
+        max-width: unset;
+    }
+    
+  }
+
+.infoli {
+    margin-bottom: 1em;
+}
+
+.picto {
+    width: 35px;
+    filter: invert(1);
+    padding: 0.5em;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    align-self: center;
+}
+
+.infolabel {
+    flex-grow: 1;
+    padding: 0.5em;
+    align-self: center;
+}
+@media screen and (max-width: 768px) {
+    .infolabel {
+        flex-grow: unset;
+    }
+}
+
+.activityblock {
+    flex-grow: 1;
+    padding: 1em;
+}
+
+.activity{
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-direction: column;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.activityheader {
+    display: flex;
+display: -webkit-flex; /* Safari */
+}
+
+.activityinfos {
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-direction: column;
+    flex-grow: 1;
+    align-self: center;
+}
+@media screen and (max-width: 768px) {
+    .activityinfos {
+        align-self: flex-start;
+    }
+    
+  }
+
+.activitytitle {
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-direction: row;
+}
+
+.activitydate {
+    font-weight: 200;
+    align-self: center;
+    min-width: 60px;
+    text-align: center;
+
+}
+
+.activitylabel {
+    flex-grow: 1;
+    padding: 0.5em;
+    font-size: 90%;
+}
+
+.activitytags {
+    font-size: 90%;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.activitylogo {
+    width: 15vw;
+    max-width: 150px;
+    display: flex;
+    display: -webkit-flex;
+    align-self: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 2px;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media print {
+    .activity {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .activitylogo {
+        width: 100px;
+    }
+}
+.activitydescription {
+    flex-grow: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    .activitylogo {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 1em;
+        
+    }
+    .cover{
+        width: 100%;
+    }
+    
+  }
+
+  @media print {
+      .cover {
+          width: 50px;
+      }
+      .page {
+        page-break-inside: avoid;
+      }
+      .cut {page-break-after: always;}
+  }
