@@ -6,7 +6,7 @@ var filesToCache = [
   `/assets/podradio.pdf`,
   '/images/avatar2.jpg',
   `/assets/plateformepodcast.pdf`,
-  '/CV-Thomas-FOREST-2020.pdf'
+  '/CV-Thomas-FOREST-2023.pdf'
 ];
 
 /* Start the service worker and cache all of the app's content */
